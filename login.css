@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,30,80,0.7),
+    rgba(0,30,80,0.7)),
+    url("bank-bg.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:900px;
+    min-height:500px;
+    display:flex;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.left-panel{
+    width:40%;
+    background:#003366;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+    text-align:center;
+}
+
+.left-panel h1{
+    margin-bottom:15px;
+    font-size:36px;
+}
+
+.left-panel p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+.login-box{
+    width:60%;
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.login-box h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#003366;
+}
+
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+
+    border:1px solid #ccc;
+    border-radius:8px;
+
+    font-size:15px;
+}
+
+.login-box input:focus{
+    outline:none;
+    border-color:#0056b3;
+}
+
+.login-box button{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#0056b3;
+    color:white;
+
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-box button:hover{
+    background:#003d82;
+}
+
+.login-box p{
+    margin-top:20px;
+    text-align:center;
+}
+
+.login-box a{
+    text-decoration:none;
+    color:#0056b3;
+    font-weight:bold;
+}
+
+/* Tablet */
+@media(max-width:768px){
+
+    .container{
+        width:90%;
+        flex-direction:column;
+    }
+
+    .left-panel{
+        width:100%;
+        padding:25px;
+    }
+
+    .login-box{
+        width:100%;
+        padding:30px;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    .container{
+        width:95%;
+    }
+
+    .left-panel h1{
+        font-size:28px;
+    }
+
+    .left-panel p{
+        font-size:15px;
+    }
+
+    .login-box{
+        padding:20px;
+    }
+
+    .login-box input{
+        padding:12px;
+    }
+
+    .login-box button{
+        padding:12px;
+    }
+}

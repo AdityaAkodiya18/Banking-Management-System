@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,20,80,0.75),
+        rgba(0,20,80,0.75)
+    ),
+    url("bank-bg.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+nav{
+    background:#002b5c;
+
+    padding:15px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    color:white;
+}
+
+.logout-btn{
+    background:#ff4d4d;
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+.balance-card{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.balance-card h2{
+    color:#002b5c;
+    margin-bottom:10px;
+}
+
+.balance-card h1{
+    color:#00a651;
+    font-size:45px;
+}
+
+.transaction-section{
+    margin-top:40px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.card h3{
+    color:#002b5c;
+    margin-bottom:20px;
+}
+
+.card input{
+    width:100%;
+    padding:12px;
+
+    border:1px solid #ccc;
+    border-radius:8px;
+
+    margin-bottom:15px;
+}
+
+.card button{
+    width:100%;
+    padding:12px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#0056b3;
+    color:white;
+
+    cursor:pointer;
+    font-size:16px;
+}
+
+.card button:hover{
+    background:#003d82;
+}
+
+/* Tablet */
+@media(max-width:768px){
+
+    .transaction-section{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .balance-card h1{
+        font-size:35px;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .container{
+        width:95%;
+    }
+
+    .balance-card{
+        padding:25px;
+    }
+
+    .balance-card h1{
+        font-size:28px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card input,
+    .card button{
+        padding:10px;
+    }
+}

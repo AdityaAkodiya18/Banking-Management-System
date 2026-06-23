@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h2> Secure Bank</h2>
+
+        <a href="/logout" class="logout-btn">
+            Logout
+        </a>
+    </nav>
+
+    <div class="container">
+
+        <div class="balance-card">
+            <h2>Current Balance</h2>
+            <h1>₹ {{ balance }}</h1>
+        </div>
+
+        <div class="transaction-section">
+
+            <div class="card">
+
+                <h3>Deposit Money</h3>
+
+                <form action="/deposit" method="POST">
+
+                    <input
+                        type="number"
+                        name="amount"
+                        placeholder="Enter Amount"
+                        required>
+
+                    <button type="submit">
+                        Deposit
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Withdraw Money</h3>
+
+                <form action="/withdraw" method="POST">
+
+                    <input
+                        type="number"
+                        name="amount"
+                        placeholder="Enter Amount"
+                        required>
+
+                    <button type="submit">
+                        Withdraw
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
